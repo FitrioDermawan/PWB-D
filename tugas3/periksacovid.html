@@ -50,10 +50,11 @@
             background-color: white;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="container-sm pt-sm-5" style="background-color: #5aa7a7;">
+    <div class="container-sm pt-sm-5 pb-sm-5" style="background-color: #5aa7a7;">
         <div class="row">
             <div class="col-sm">
             </div>
@@ -73,9 +74,7 @@
 
             </div>
         </div>
-        <br>
     </div>
-
     <div class="container-sm border border-3 p-sm-5">
         <br>
         <div class="row">
@@ -95,9 +94,9 @@
         </div>
         <div class="row">
             <div class="col-sm">
-                <form class="was-validated">
+                <form class="needs-validation" novalidate>
                     <div class="row">
-                        <div class="col-sm gx-0">
+                        <div class="col-sm">
                             <div class="form-group" id="nameform">
                                 <label for="name" class="form-label">Nama Lengkap :</label>
                                 <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap anda" required>
@@ -109,8 +108,7 @@
                         <div class="col-sm-6">
                             <div class="form-group" id="nipform">
                                 <label for="nip" class="form-label">NIP :</label>
-                                <input type="number" class="form-control" placeholder="Masukkan NIP anda" id="nip"
-                                    required>
+                                <input type="number" class="form-control"  id="nip" placeholder="Masukkan NIP anda" required>
                                 <div class="invalid-feedback">Mohon isi kolom ini.</div>
                             </div>
                         </div>
@@ -120,11 +118,11 @@
                             <label for="sex">Jenis kelamin:</label>
                             <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="optsex" id="sexm" value="m" required>
+                                <input class="form-check-input" type="radio" value="m" name="optsex" id="sexm"  required>
                                 <label class="form-check-label" for="sexm">Pria</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="optsex" id="sexf" value="f" required>
+                                <input class="form-check-input" type="radio" value="f" name="optsex" id="sexf"  required>
                                 <label class="form-check-label" for="sexf">Wanita</label>
                                 <div class="invalid-feedback" style="margin-left: 16px">Mohon pilih opsi ini.</div>
                             </div>
@@ -259,10 +257,14 @@
                     <br>
                     <form>
                     </form>
-                    <br>
-                    <button type="submit" class="btn btn-green" id="btnsubmit">Lihat hasil</button>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-green" id="btnsubmit">Lihat hasil</button>
+                        </div>
+                    </div>
                     <script>
                         (function () {
+
                             'use strict'
                             var forms = document.querySelectorAll('.needs-validation')
                             Array.prototype.slice.call(forms)
@@ -278,7 +280,7 @@
                                 })
                         })()
                         $(document).ready(function () {
-                            $(".invalid-feedback").hide();
+                            
                             $("#btnsubmit").click(function () {
                                 var name = $("#name").val();
                                 var nip = $("#nip").val();
@@ -365,6 +367,7 @@
                     </script>
                 </form>
             </div>
+
         </div>
     </div>
     <div class="container" id="ans">
@@ -401,12 +404,11 @@
         <div class="row">
             <div class="col-sm">
                 Untuk informasi tes terdekat klik
-                <a
-                    href="https://www.halodoc.com/cari-dokter/bekasi/spesialis/pcr-test?gclid=CjwKCAjw7--KBhAMEiwAxfpkWAGwiXdyPKbRtysWFQrUB2-Z5MhAsgMAGGQghFhGX37DYPZAosZ8PRoCTGgQAvD_BwE">
-                    disini</a>
+                <a href="https://www.halodoc.com/cari-dokter/bekasi/spesialis/pcr-test?gclid=CjwKCAjw7--KBhAMEiwAxfpkWAGwiXdyPKbRtysWFQrUB2-Z5MhAsgMAGGQghFhGX37DYPZAosZ8PRoCTGgQAvD_BwE">disini</a>
             </div>
         </div>
     </div>
+    
 </body>
 
 </html>
